@@ -2,6 +2,8 @@
 
 Cara Install silahkan urutkan command dibawah :
 
+Buka termux
+
 pkg install git
 
 git clone https://github.com/abeteid/freeline
