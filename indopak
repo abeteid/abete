@@ -5,7 +5,7 @@ quickbms=$PREFIX/share/quickbms
 quickbms_dir=$PREFIX/share/quickbms
 sd=$EXTERNAL_STORAGE/Download
 dobb=$EXTERNAL_STORAGE/Download/obb
-tx=$HOME/indopak
+tx=$HOME/freeline
 rx=$HOME
 NOCOLOR='\033[0m'
 RED='\033[0;31m'
@@ -63,7 +63,7 @@ chmod +x quickbms_4gb_files
 yes | cp -rf quickbms_4gb_files $quickbms_dir
 chmod +x quickbms
 yes | cp -rf quickbms $quickbms_dir
-chmod +x etc/pubg.bms indopak
+chmod +x etc/pubg.bms freeline
 sleep 1
 rm -rf quickbms*
 echo "done"
@@ -147,8 +147,8 @@ echo -e ""
 echo -e "${YELLOW} Starting Unpacking..... ${NOCOLOR}"
 echo -e "${LIGHTGREEN}"
 sleep 2
-grep -Ril "$tfil" $tx/output > $tx/Ril.ini
-for i in $(cat Ril.ini); do echo "cp -rf $i $down/output"; done >> $tx/Ril
+grep -abt "$tfil" $tx/output > $tx/abt.ini
+for i in $(cat abt.ini); do echo "cp -rf $i $down/output"; done >> $tx/abt
 echo -e "${LIGHTGREEN}DONE ${NOCOLOR}"
 echo " "
 echo -e "${LIGHTBLUE}Silahkan lihat dan Edit File *dat di Folder Download/output dan Jika sudah Selesai Kembali kesini lagi untuk Repack ${NOCOLOR}"
@@ -157,10 +157,10 @@ if [[ ! -d "$down/output" ]]
 then
 mkdir $down/output
 fi
-chmod +x $tx/Ril
-bash Ril
-rm -rf $tx/Ril
-rm -rf $tx/Ril.ini
+chmod +x $tx/abt
+bash abt
+rm -rf $tx/abt
+rm -rf $tx/abt.ini
 repack
 src
 }
@@ -182,7 +182,7 @@ clear
 echo -e "${YELLOW}Starting Unpacking..... ..."
 echo -e "${LIGHTGREEN}"
 sleep 2
-if grep -Ril "CVars" output
+if grep -abt "CVars" output
 then
 tfil=CVars
 echo -e "${NOCOLOR}"
@@ -205,7 +205,7 @@ exit
 ;;
 "FINISH")
 cd $tx
-rm -rf Ril.ini
+rm -rf abt.ini
 cd $tx
 pakfitures
 exit
@@ -213,7 +213,7 @@ exit
 *)
 echo -e "${YELLOW}Starting Engine..."
 echo -e "${LIGHTGREEN}"
-if grep -Ril $REPLY output
+if grep -abt $REPLY output
 then
 tfil=$REPLY
 echo -e "${NOCOLOR}"
