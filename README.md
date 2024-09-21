@@ -6,6 +6,6 @@ git clone https://github.com/abeteid/freeline
 
 cd
 
-cd indopak
+cd freeline
 
 bash install
