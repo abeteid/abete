@@ -1,10 +1,8 @@
-
-
 down=$EXTERNAL_STORAGE/Download
 dpak=$EXTERNAL_STORAGE/Download/pak
 quickbms=$PREFIX/share/quickbms
 quickbms_dir=$PREFIX/share/quickbms
-tx=$HOME/freeline
+tx=$HOME/abete
 txz=$PREFIX/bin
 
 NOCOLOR='\033[0m'
@@ -34,8 +32,8 @@ chmod +x ShadowTrackerExtra.log
 mv ShadowTrackerExtra.log $tx/Logs
 fi
 cd $tx
-chmod +x freeline
-yes | cp -rf freeline $txz
+chmod +x abete
+yes | cp -rf abete $txz
 
 cd $down
 if [[ -d "pak" ]]
@@ -57,7 +55,7 @@ chmod +x quickbms_4gb_files
 yes | cp -rf quickbms_4gb_files $quickbms_dir
 chmod +x quickbms
 yes | cp -rf quickbms $quickbms_dir
-chmod +x etc/pubg.bms freeline
+chmod +x etc/pubg.bms abete
 sleep 1
 printf "\n"
 FILE=$quickbms_dir/quickbms
@@ -72,10 +70,10 @@ fi
 install
 clear
 echo " ======================= "
-echo -e " ${LIGHTGREEN}Install freeline selesai "
+echo -e " ${LIGHTGREEN}Install abete selesai "
 echo " ======================= "
 echo " "
 echo -e " ${YELLOW}silahkan ketik exit dan jalankan TERMUX anda ${NOCOLOR}"
 echo " "
-echo -e " kemudian mengetikan ${LIGHTGREEN}freeline ${NOCOLOR}(huruf kecil semua ) "
+echo -e " kemudian mengetikan ${LIGHTGREEN}abete ${NOCOLOR}(huruf kecil semua ) "
 exit
