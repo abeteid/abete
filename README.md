@@ -6,9 +6,7 @@ Buka termux
 
 pkg install git
 
-git clone https://github.com/abeteid/freeline
-
-cd
+git clone https://github.com/abeteid/abete
 
 cd freeline
 
