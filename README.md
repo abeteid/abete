@@ -8,7 +8,7 @@ pkg install git
 
 git clone https://github.com/abeteid/abete
 
-cd freeline
+cd abete
 
 bash install
 
